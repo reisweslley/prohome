@@ -1,99 +1,147 @@
+/* Geral */
 body {
-    font: 400 15px/1.8 Lato, sans-serif;
-    color: #777;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
-h3, h4 {
-    margin: 10px 0 30px 0;
-    letter-spacing: 10px;
-    font-size: 20px;
-    color: #111;
-}
-.container{
-    padding: 80px 120px;
-}
-.person{
-    border: 10px solid transparent;
-    margin-bottom: 25px;
+
+.container {
     width: 80%;
-    height: 80%;
-    opacity: 0.7;
-}
-.person:hover {
-    border-color: #f1f1f1;
-}
-.Carousel-inner img {
- -webkit-filter: grayscale(90%);
- filter: grayscale(90%);
- width: 100%;
- margin: auto; 
+    margin: auto;
+    overflow: hidden;
 }
 
-.carousel-caption h3 {
+/* Header */
+header {
+    background: #333;
     color: #fff;
+    padding: 10px 0;
 }
 
-@media (max-width: 600px){
-    .carousel-caption {
-        display: none;
-    }
-}
-
-.navbar {
-    margin-bottom: 0;
-    background-color: #2d2d30;
-    border: 0;
-    font-size:  11px;
-    letter-spacing: 4px;
-    opacity: 0.9;
-}
-
-.navbar li a, .nabar .navbar-brand {
-    color: #d5d5d5;
-}
-
-.navbar-nav li a:hover {
+header a {
     color: #fff;
-}
-
-.navbar-nav li.active a {
-    color: #fff;
-    background-color: #29292c;
-}
-
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-
-}
-
-.open .dropdown-toggle {
-    color: #fff;
-    background-color: #555;
-}
-
-.dropdown-menu li a {
-    color: #000;
-}
-
-.dropdown-menu li a:hover {
-    background-color: red;
-}
-footer {
-    background-color: #2d2d30;
-    color: #f5f5f5;
-    padding: 32px;
-}
-
-footer a {
-    color: #f5f5f5;
-}
-
-footer a:hover {
-    color: #777;
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
-.form-control {
-    border-radius: 0;
+
+header ul {
+    list-style: none;
+    padding: 0;
 }
-textarea {
-    resize: none;
+
+header .logo {
+    float: left;
+    font-size: 24px;
+    padding: 10px 0;
 }
+
+header .menu {
+    float: right;
+}
+
+header .menu ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Hero Section */
+#hero {
+    background: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#hero h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+#hero p {
+    font-size: 20px;
+    color: #666;
+}
+
+/* Section Titles */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* Services Section */
+#services {
+    background: #fff;
+    padding: 40px 0;
+}
+
+.service-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-item {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* Contact Section */
+#contact {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+}
+
+#contact form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background: #ff4757;
+}
+
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    }
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.2s ease-out;
+}
+
+.fade-in.in-view {
+    opacity: 1;
+    }
