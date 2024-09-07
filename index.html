@@ -79,7 +79,27 @@
             <p>&copy; 2022 Weslley Reis. Todos os direitos reservados.</p>
         </div>
     </footer>
+  <script>
+        // Função para adicionar a classe 'fade-in' quando o elemento entra na viewport
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
 
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect();
+
+                // Verifica se o elemento está dentro da viewport
+                if (position.top >= 0 && position.bottom <= window.innerHeight) {
+                    element.classList.add('in-view');
+                }
+            });
+        }
+
+        // Evento de scroll para ativar a animação
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Chama a função para garantir que elementos visíveis no carregamento da página sejam animados
+        window.addEventListener('DOMContentLoaded', animateOnScroll);
+  </script>
 </body>
         </html>
         
